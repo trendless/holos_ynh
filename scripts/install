@@ -11,6 +11,10 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
+jwt_secret=$(ynh_string_random --length=64)
+token=$(ynh_string_random --length=32)
+api_key=$(ynh_string_random --length=48)
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
