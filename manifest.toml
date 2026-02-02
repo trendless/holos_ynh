@@ -40,23 +40,15 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
-    [install.admin]
-    type = "user"
-
-    [install.password]
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
-
 [resources]
 
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/foo/bar/archive/refs/tags/v1.2.3.tar.gz"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    url = "https://codeberg.org/tom79/Holos-Relay-Server/archive/8a268fb2fe8711a5e85c4420604cd5a340483eab.tar.gz"
+    sha256 = "f05cb1a71837f53852ec95373ce27504a9deccf602e99f523d495fcb05e1085d"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 
