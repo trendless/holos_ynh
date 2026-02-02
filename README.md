@@ -8,9 +8,9 @@ It shall NOT be edited by hand.
   Holos, packaged for YunoHost
 </h1>
 
-Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)
+Identity relay server for mobile Fediverse instances
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://example.com)
+[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://holos.social/)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.example.com)
 [![Version: 1.0~ynh1](https://img.shields.io/badge/Version-1.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/holos/)
 
@@ -27,7 +27,7 @@ Explain in *a few (10~15) words* the purpose of the app or what it actually does
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/holos)](https://ci-apps.yunohost.org/ci/apps/holos/)
 
-🛠️ Upstream Holos repository: <https://some.forge.com/example/example>
+🛠️ Upstream Holos repository: <https://codeberg.org/tom79/Holos-Relay-Server>
 
 Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/holos_ynh/tree/testing).
 
