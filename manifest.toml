@@ -58,6 +58,7 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
+    server.default = 4000
 
     [resources.apt]
     packages = "postgresql, postgresql-contrib, redis-server"
