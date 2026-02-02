@@ -11,7 +11,6 @@ It shall NOT be edited by hand.
 Identity relay server for mobile Fediverse instances
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://holos.social/)
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.example.com)
 [![Version: 1.0~ynh1](https://img.shields.io/badge/Version-1.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/holos/)
 
 <div align="center">
