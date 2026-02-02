@@ -12,11 +12,9 @@ version = "1.0~ynh1"
 maintainers = [ ]
 
 [upstream]
-license = "free" # you can see the available licenses identifiers list here: https://spdx.org/licenses/
+license = "AGPL-3.0-only"
 website = "https://holos.social/"
-demo = "https://demo.example.com"
-admindoc = "https://yunohost.org/packaging_apps"
-userdoc = "https://yunohost.org/apps"
+admindoc = "https://holos.social/how-it-works"
 code = "https://codeberg.org/tom79/Holos-Relay-Server"
 
 [integration]
