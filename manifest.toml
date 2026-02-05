@@ -50,7 +50,7 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     url = "https://codeberg.org/tom79/Holos-Relay-Server/archive/9296f2808dbfd0f848352244bcc56d2b82353091.tar.gz"
-    sha256 = "f05cb1a71837f53852ec95373ce27504a9deccf602e99f523d495fcb05e1085d"
+    sha256 = "adb9e981e518914a26c56adf5d6e51bf2d94d35d29c0d32c1cf761872967b7c2"
 
     autoupdate.strategy = "latest_github_commit"
 
