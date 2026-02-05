@@ -59,11 +59,11 @@ yunohost service add "$app" --description="Identity relay server" --log="/var/lo
 ynh_script_progression "Installing the app..."
 
 pushd "$install_dir"
- 	ynh_hide_warnings ynh_exec_as_app npm install
+ 	ynh_hide_warnings ynh_exec_as_app env $(cat $install_dir/.env | xargs)  npm install
     # following command is disabled because it will hang on super_admin creation so we create it ourself
 	#ynh_hide_warnings ynh_exec_as_app npx tsx scripts/init-db.ts
- 	ynh_psql_db_shell <<< "INSERT INTO users (email, password_hash, role, email_verified, created_at, updated_at) VALUES ('$admin_mail', '\$2b\$10\$jIC3k/w.m8XRL8YLX5jgz.hCvthxRDzRDchrMgVCCrEkYf2pp/bme', 'SUPER_ADMIN', true, NOW(), NOW()) ON CONFLICT (email) DO NOTHING;"
-	ynh_hide_warnings ynh_exec_as_app npm run build
+ 	ynh_exec_as_app env $(cat $install_dir/.env | xargs) ynh_psql_db_shell <<< "INSERT INTO users (email, password_hash, role, email_verified, created_at, updated_at) VALUES ('$admin_mail', '\$2b\$10\$jIC3k/w.m8XRL8YLX5jgz.hCvthxRDzRDchrMgVCCrEkYf2pp/bme', 'SUPER_ADMIN', true, NOW(), NOW()) ON CONFLICT (email) DO NOTHING;"
+	ynh_hide_warnings ynh_exec_as_app env $(cat $install_dir/.env | xargs) npm run build
 popd
 
 #=================================================
