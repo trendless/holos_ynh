@@ -67,7 +67,6 @@ source $install_dir/.env
 	# following command is disabled because it will hang on super_admin creation so we create it ourself
 	#ynh_hide_warnings ynh_exec_as_app npx tsx scripts/init-db.ts
 	ynh_psql_db_shell < src/database/schema.sql
-	ynh_psql_db_shell <<< "DROP SCHEMA public CASCADE;"
 	ynh_psql_db_shell <<< "CREATE SCHEMA public;"
 	ynh_psql_db_shell <<< "GRANT ALL ON SCHEMA public TO $db_user;"
 	ynh_psql_db_shell <<< "GRANT ALL ON SCHEMA public TO public;"
