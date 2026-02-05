@@ -45,6 +45,7 @@ ynh_script_progression "Installing the app..."
 
 pushd "$install_dir"
  	ynh_hide_warnings ynh_exec_as_app npm install
+	ynh_hide_warnings ynh_exec_as_app npx tsx scripts/init-db.ts
  	ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
