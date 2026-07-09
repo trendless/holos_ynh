@@ -72,6 +72,7 @@ source $install_dir/.env
 	
 	#ynh_psql_db_shell < src/database/schema.sql
 	(echo "SET ROLE $db_user;"; cat src/database/schema.sql) | ynh_psql_db_shell
+	ynh_hide_warnings ynh_exec_as_app npx tsx src/database/run-all-migrations.ts
 	ynh_psql_db_shell <<< "INSERT INTO users (email, password_hash, role, email_verified, created_at, updated_at) VALUES ('$admin_mail', '\$2b\$10\$jIC3k/w.m8XRL8YLX5jgz.hCvthxRDzRDchrMgVCCrEkYf2pp/bme', 'SUPER_ADMIN', true, NOW(), NOW()) ON CONFLICT (email) DO NOTHING;"
 
 	ynh_hide_warnings ynh_exec_as_app npm run build
