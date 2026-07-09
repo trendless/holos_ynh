@@ -44,7 +44,7 @@ yunohost service add "$app" --description="Identity relay server"
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start" --log_path=systemd --wait_until="[SERVER] Running on"
+ynh_systemctl --service="$app" --action="start" --log_path=systemd --wait_until="\\[SERVER\\] Running on"
 
 ynh_systemctl --service=nginx --action=reload
 
