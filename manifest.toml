@@ -7,7 +7,7 @@ name = "Holos"
 description.en = "Identity relay server for mobile Fediverse instances"
 description.fr = "Serveur relais d'identité pour instances mobiles Fediverse"
 
-version = "2026-06-20~ynh1"
+version = "2026.06.20~ynh1"
 
 maintainers = [ ]
 
