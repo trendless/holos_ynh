@@ -37,14 +37,14 @@ ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
 
-yunohost service add "$app" --description="Identity relay server" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Identity relay server"
 
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="$app" --action="start" --log_path=systemd --wait_until="[SERVER] Running on"
 
 ynh_systemctl --service=nginx --action=reload
 
