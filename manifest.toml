@@ -43,7 +43,7 @@ ram.runtime = "50M"
 
     [install.password]
     type = "password"
-    pattern.regex = '^[^'"`]+$'
+    pattern.regexp = '^[^'"`]+$'
     pattern.error.en = "Password cannot contain quotes or backticks"
     pattern.error.fr = "Le mot de passe ne peut contenir de guillemets ou backticks"
     
