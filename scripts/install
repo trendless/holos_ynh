@@ -20,7 +20,7 @@ api_key=$(ynh_string_random --length=48)
 ynh_app_setting_set --key=api_key --value=$api_key
 
 admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
-password=$(printf '%q' '$password')
+password=$(printf '%q' "$password")
 ynh_app_setting_set --key=password --value=$password
 
 redis_db=$(ynh_redis_get_free_db)
