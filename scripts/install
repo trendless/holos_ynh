@@ -13,6 +13,8 @@ source /usr/share/yunohost/helpers
 jwt_secret=$(ynh_string_random --length=64)
 ynh_app_setting_set --key=jwt_secret --value=$jwt_secret
 
+password=$adm_password
+
 token=$(ynh_string_random --length=32)
 ynh_app_setting_set --key=token --value=$token
 
