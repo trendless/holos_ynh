@@ -19,12 +19,7 @@ ynh_app_setting_set --key=token --value=$token
 api_key=$(ynh_string_random --length=48)
 ynh_app_setting_set --key=api_key --value=$api_key
 
-#if [[ "$password" =~ [\'\"\`] ]]; then
-#    ynh_die --message="Password cannot contain quotes or backticks"
-#fi
 admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
-#ynh_app_setting_set --key=password --value=$password
-password='changemenow'
 
 redis_db=$(ynh_redis_get_free_db)
 ynh_app_setting_set --key=redis_db --value=$redis_db
