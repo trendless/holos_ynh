@@ -7,7 +7,7 @@ name = "Holos"
 description.en = "Identity relay server for mobile Fediverse instances"
 description.fr = "Serveur relais d'identité pour instances mobiles Fediverse"
 
-version = "1.0~ynh2"
+version = "2026.06.20~ynh1"
 
 maintainers = [ ]
 
@@ -26,9 +26,9 @@ multi_instance = true
 ldap = false
 sso = false
 
-disk = "50M"
-ram.build = "50M"
-ram.runtime = "50M"
+disk = "700M"
+ram.build = "700M"
+ram.runtime = "300M"
 
 [install]
     [install.domain]
@@ -49,7 +49,7 @@ ram.runtime = "50M"
     url = "https://codeberg.org/tom79/Holos-Relay-Server/archive/befe9e6e7bb338e28509d3a432127c8cd497c37d.tar.gz"
     sha256 = "e919f6476797616d5ab3640665e9968c4075b6245b33f6f41aed9362251b451f"
 
-    autoupdate.strategy = "latest_github_commit"
+    autoupdate.strategy = "latest_forgejo_commit"
 
     [resources.system_user]
 
