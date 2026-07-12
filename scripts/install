@@ -20,7 +20,6 @@ api_key=$(ynh_string_random --length=48)
 ynh_app_setting_set --key=api_key --value=$api_key
 
 admin_mail=$(ynh_user_get_info --username=$admin --key=mail)
-ynh_app_setting_set --key=password --value=$password
 
 redis_db=$(ynh_redis_get_free_db)
 ynh_app_setting_set --key=redis_db --value=$redis_db
@@ -72,7 +71,7 @@ source $install_dir/.env
 	
 	(echo "SET ROLE $db_user;"; cat src/database/schema.sql) | ynh_psql_db_shell
 	ynh_hide_warnings ynh_exec_as_app npx tsx src/database/run-all-migrations.ts
-	ynh_psql_db_shell <<< "INSERT INTO users (email, password_hash, role, email_verified, created_at, updated_at) VALUES ('$admin_mail', '\$2b\$10\$jIC3k/w.m8XRL8YLX5jgz.hCvthxRDzRDchrMgVCCrEkYf2pp/bme', 'SUPER_ADMIN', true, NOW(), NOW()) ON CONFLICT (email) DO NOTHING;"
+	ynh_psql_db_shell <<< "INSERT INTO users (email, password_hash, role, email_verified, created_at, updated_at) VALUES ('$admin_mail', '\$2b\$10\$O.QWabJSeislrkAORvQnAOjn6MPwPMulxVnEAYYrtMX4e4COyYtxi', 'SUPER_ADMIN', true, NOW(), NOW()) ON CONFLICT (email) DO NOTHING;"
 
 	ynh_hide_warnings ynh_exec_as_app npm run build
 
