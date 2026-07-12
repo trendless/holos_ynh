@@ -47,7 +47,7 @@ ram.runtime = "300M"
 
     [resources.sources.main]
     url = "https://codeberg.org/tom79/Holos-Relay-Server/archive/befe9e6e7bb338e28509d3a432127c8cd497c37d.tar.gz"
-    sha256 = "e919f6476797616d5ab3640665e9968c4075b6245b33f6f41aed9362251b451f"
+    sha256 = "8b464398e73fba22b17a5b858733b21c9e4245fac0061024f050251115d018c0"
 
     autoupdate.strategy = "latest_forgejo_commit"
 
