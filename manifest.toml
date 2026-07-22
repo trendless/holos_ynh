@@ -50,7 +50,7 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     url = "https://codeberg.org/tom79/Holos-Relay-Server/archive/befe9e6e7bb338e28509d3a432127c8cd497c37d.tar.gz"
-    sha256 = "194392304cc62b07d196a662de7df5ec0e1a22fece99ecb8113e2b8856972abd"
+    sha256 = "8b464398e73fba22b17a5b858733b21c9e4245fac0061024f050251115d018c0"
 
     autoupdate.strategy = "latest_github_commit"
 
@@ -67,7 +67,7 @@ ram.runtime = "50M"
     server.default = 4000
 
     [resources.apt]
-    packages = "postgresql, postgresql-contrib, redis-server"
+    packages = "postgresql, postgresql-contrib, redis-server, python3-bcrypt"
 
     [resources.database]
     type = "postgresql"
